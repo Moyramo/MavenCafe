@@ -82,10 +82,10 @@ if st.button("Predecir"):
     # Realizar la predicción
     prediction = model.predict(input_data)[0]
 
-    # Mostrar el resultado con estilo
     st.markdown(f"""
         <div style="text-align: center; padding: 20px; border: 2px solid #4CAF50; border-radius: 10px; background-color: #f9f9f9;">
-            <h2>Transacciones Totales Predichas</h2>
-            <p style="font-size: 32px; color: #4CAF50;"><strong>{prediction:,.2f}</strong></p>
+            <h2>Transacciones Totales</h2>
+            <p style="font-size: 32px; color: #4CAF50;"><strong>{int(prediction):,}</strong></p>
         </div>
         """, unsafe_allow_html=True)
+
